@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+.site-footer { margin-top: var(--section-gap); padding-top: 48px; background: var(--color-footer); color: var(--color-muted); }
+.site-footer h2 { margin-bottom: 12px; color: var(--color-white); font-size: 13px; }
+.site-footer h2::after { display: none; }
+.footer-top { display: flex; padding-bottom: 32px; flex-direction: column; gap: 32px; }
+.footer-links { display: flex; order: 2; gap: 40px; }
+.footer-links li { margin-bottom: 6px; }
+.footer-links a:hover { color: var(--color-white); }
+.subscribe { max-width: 440px; }
+.subscribe__row { display: flex; margin-top: 12px; flex-direction: column; gap: 10px; }
+.subscribe__row input { min-width: 0; padding: 12px; border: 1px solid transparent; background: var(--color-text-dark); color: var(--color-white); font: inherit; }
+.subscribe__row input:focus { border-color: var(--color-teal); outline: 0; }
+.subscribe__agree { display: block; margin-top: 10px; font-size: 12px; }
+.subscribe__success { margin-top: 12px; color: var(--color-teal); }
+.footer-bottom { display: flex; padding: 20px 0 24px; flex-direction: column-reverse; align-items: center; gap: 16px; border-top: 1px solid var(--color-text-dark); font-size: 12px; }
+.socials { display: flex; gap: 8px; }
+.socials a { display: flex; width: 30px; height: 30px; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-teal); color: var(--color-white); font: 400 11px/1 var(--font-heading); }
+.socials a:hover { background: var(--color-accent); }
+@include mq(md) {
+  .footer-top { flex-direction: row; justify-content: space-between; }
+  .footer-links { order: 0; }
+  .subscribe { width: min(360px, 45%); }
+  .subscribe__row { flex-direction: row; gap: 0; }
+  .subscribe__row input { flex: 1; }
+  .footer-bottom { flex-direction: row; justify-content: space-between; }
+}
