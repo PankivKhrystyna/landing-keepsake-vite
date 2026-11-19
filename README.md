@@ -2,7 +2,7 @@
 
 ## 🌐 Live Demo
 
-[Переглянути сайт на GitHub Pages](<>)
+[Переглянути сайт на GitHub Pages](https://pankivkhrystyna.github.io/landing-keepsake-vite/)
 
 ## 📖 Про проєкт
 
