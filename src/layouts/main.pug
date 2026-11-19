@@ -1,21 +1,26 @@
+include ../data/content.pug
+include ../mixins/ui.pug
 doctype html
-html(lang="en")
-    head
-        block meta
-            meta(charset="utf-8")
-            meta(name="viewport" content="width=device-width, initial-scale=1")
-        block title
-            title Vite Pug Template
-        block fonts
-        block main-scripts
-        block styles
-            link(rel="stylesheet" href="/src/styles/main.scss")
-    body
-        block data
-        block header
-            header.page-header header
-        block content
-            main.page-main content
-        block footer
-            footer.page-footer footer
-        block add-scripts
+html(lang='en')
+  head
+    block meta
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1')
+      meta(name='theme-color' content='#ffffff')
+    block title
+      title Keepsake — Digital & Branding Agency
+    append meta
+      meta(name='description' content='Keepsake is a digital and branding agency specialising in web design, poster design and motion video.')
+      meta(property='og:title' content='Keepsake — Digital & Branding Agency')
+      meta(property='og:type' content='website')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
+    link(href='https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@300;400;700&family=Oswald:wght@300;400;700&display=swap' rel='stylesheet')
+    block styles
+      link(rel='stylesheet' href='/src/styles/main.scss')
+    append styles
+      link(rel='preload' href='https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap' as='style')
+  body
+    block content
+    block scripts
+      script(type='module' src='/src/scripts.js')
