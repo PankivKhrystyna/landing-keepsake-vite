@@ -1,0 +1,28 @@
+@use '../abstracts' as *;
+.works__head { display: flex; margin-bottom: 20px; flex-direction: column; gap: 16px; }
+.works-filter { display: flex; overflow-x: auto; margin-right: calc(var(--gutter) * -1); padding-bottom: 4px; gap: 8px; }
+.works-filter input { position: absolute; opacity: 0; }
+.works-filter label { flex: none; padding: 8px 14px; border: 1px solid var(--color-border); cursor: pointer; color: var(--color-text-dark); font: 400 12px/1 var(--font-heading); letter-spacing: 1px; text-transform: uppercase; }
+.works-filter label:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.works-filter input:checked + label { border-color: var(--color-accent); background: var(--color-accent); color: var(--color-white); }
+.works-filter input:focus-visible + label { @include focus-ring; }
+.works-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+.work-card { position: relative; display: block; overflow: hidden; aspect-ratio: 1 / 0.72; }
+.work-card[hidden] { display: none; }
+.work-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s; }
+.work-card:hover img { transform: scale(1.04); }
+.work-card__info { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; background: var(--color-overlay); color: var(--color-white); opacity: 0; text-align: center; transition: 0.25s; }
+.work-card:hover .work-card__info, .work-card:focus-visible .work-card__info { opacity: 1; }
+.work-card:focus-visible { outline: 2px solid var(--color-teal); outline-offset: -4px; }
+.work-card__plus { display: flex; width: 44px; height: 44px; align-items: center; justify-content: center; border-radius: 50%; background: var(--color-teal); font-size: 26px; }
+.work-card h3 { font: 400 14px/1 var(--font-heading); letter-spacing: 1px; text-transform: uppercase; }
+.work-card__info i { width: 24px; height: 2px; background: var(--color-accent); }
+.work-card__info > span:last-child { color: var(--color-teal); font-size: 12px; }
+.works__more { margin-top: 24px; text-align: center; }
+@include mq(md) {
+  .works__head { flex-direction: row; align-items: center; justify-content: space-between; }
+  .works-filter { margin-right: 0; overflow: visible; }
+  .works-grid { grid-template-columns: repeat(2, 1fr); }
+  .work-card { aspect-ratio: 1 / 0.79; }
+}
+@include mq(lg) { .works-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; } }

@@ -1,0 +1,7 @@
+@use '../abstracts' as *;
+.btn { display: inline-flex; padding: 11px 18px; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; cursor: pointer; font: 400 12px/1 var(--font-heading); letter-spacing: 1px; text-transform: uppercase; transition: 0.2s; }
+.btn--primary { background: var(--color-accent); color: var(--color-white); }
+.btn--primary:hover { background: var(--color-accent-hover); }
+.btn--secondary { border-color: var(--color-border); background: var(--color-white); color: var(--color-text-dark); }
+.btn--secondary:hover { border-color: var(--color-accent); color: var(--color-accent); }
+.btn:focus-visible { @include focus-ring(var(--color-text-dark)); }
