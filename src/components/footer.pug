@@ -1,5 +1,31 @@
-footer.footer
-    .footer-outer
-        .footer-inner
-            include logo
-            h4 Приєднуйся і живи зі мною у світі солодощів!
+footer.site-footer
+  .container
+    .footer-top
+      .footer-links
+        .footer-links__column
+          h2 Studio
+          ul
+            each item in studioLinks
+              li: a(href=item.href)= item.label
+        .footer-links__column
+          h2 Services
+          ul
+            each item in serviceLinks
+              li: a(href=item.href)= item.label
+      .subscribe
+        h2 Newsletter
+        p Fresh case studies and design notes, once a month.
+        form(action='#subscribe-success' method='get')
+          label.sr-only(for='email') Your email address
+          .subscribe__row
+            input#email(type='email' placeholder='Your email address' required)
+            button.btn.btn--primary(type='submit') Subscribe
+          p.subscribe__agree
+            input#agree(type='checkbox' required)
+            label(for='agree') I agree to the privacy policy.
+        p#subscribe-success.subscribe__success Thanks for subscribing!
+    .footer-bottom
+      p © 2026 Keepsake. All rights reserved.
+      ul.socials
+        each social in socials
+          li: a(href=social.href aria-label=social.label)= social.label
