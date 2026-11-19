@@ -1,0 +1,20 @@
+section.section.clients-section
+  .container
+    h2 Clients & kind words
+    p.lead Some of the teams that trusted us with their brands.
+    ul.clients
+      each client in clients
+        li= client
+    figure.quote
+      blockquote
+        span.quote__mark “
+        p Keepsake turned a vague brief into a brand we are proud of. The team was fast, honest about trade-offs and obsessed with the details.
+      figcaption
+        span.avatar OM
+        span
+          b Olena Marchenko
+          small Marketing Lead, Nordly
+        .quote__dots(aria-label='Testimonial 1 of 3')
+          i.is-active
+          i
+          i

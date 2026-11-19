@@ -1,0 +1,16 @@
+section#journal.section.journal
+  .container
+    h2 From the journal
+    p.lead Notes on process, case studies and things that inspire us.
+
+    .posts
+      each post, i in posts
+        article.post
+          .post__thumb(class=post.style)
+            +picture(post.image, post.alt, false, 'journal')
+
+          .post__content
+            p.post__meta #{post.date} / #{post.category}
+            h3= post.title
+            p= post.text
+            a.more(href='#journal' aria-label=`Read more: ${post.title}`) Read more ›
