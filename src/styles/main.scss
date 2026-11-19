@@ -2,52 +2,61 @@
 @use 'base';
 @use 'layout';
 @use 'components';
+
 :root {
   @each $name, $value in $colors {
-    --color-#{'' + $name}: #{$value}};
-    --font-heading: #{$font-heading};
-    --font-body: #{$font-body};
-    --font-logo: #{$font-logo};
-    --gutter: 20px;
-    --section-gap: 56px;
-    --header-h: 68px;
-    --logo-size: 22px;
-    --logo-k: 34px;
-    --hero-h1: 26px;
-    --cta-h: 22px;
-    --quote-size: 16px;
-    --stat-size: 38px;
-    --icon-size: 72px;
-    --thumb-size: 96px;
-    @include mq(md) {
-      --gutter: 40px;
-      --section-gap: 72px;
-      --logo-size: 26px;
-      --logo-k: 40px;
-      --hero-h1: 32px;
-      --cta-h: 24px;
-      --quote-size: 19px;
-      --stat-size: 40px;
-      --icon-size: 96px;
-      --thumb-size: 150px;
-    }
-    @include mq(lg) {
-      --gutter: 90px;
-      --section-gap: 90px;
-      --hero-h1: 40px;
-      --cta-h: 28px;
-      --quote-size: 22px;
-      --stat-size: 48px;
-    }
+    --color-#{'' + $name}: #{$value};
   }
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-    *, *::before, *::after {
-      scroll-behavior: auto;
-      transition-duration: 0.01ms;
-      animation-duration: 0.01ms;
-      animation-iteration-count: 1;
-    }
+
+  --font-heading: #{$font-heading};
+  --font-body: #{$font-body};
+  --font-logo: #{$font-logo};
+  --gutter: 20px;
+  --section-gap: 56px;
+  --header-h: 68px;
+  --logo-size: 22px;
+  --logo-k: 34px;
+  --hero-h1: 26px;
+  --cta-h: 22px;
+  --quote-size: 16px;
+  --stat-size: 38px;
+  --icon-size: 72px;
+  --thumb-size: 96px;
+
+  @include mq(md) {
+    --gutter: 40px;
+    --section-gap: 72px;
+    --logo-size: 26px;
+    --logo-k: 40px;
+    --hero-h1: 32px;
+    --cta-h: 24px;
+    --quote-size: 19px;
+    --stat-size: 40px;
+    --icon-size: 96px;
+    --thumb-size: 150px;
   }
+
+  @include mq(lg) {
+    --gutter: 90px;
+    --section-gap: 90px;
+    --hero-h1: 40px;
+    --cta-h: 28px;
+    --quote-size: 22px;
+    --stat-size: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto;
+    transition-duration: 0.01ms;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
+}

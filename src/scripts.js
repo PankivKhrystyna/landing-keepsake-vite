@@ -15,7 +15,6 @@ loadMore?.addEventListener('click', () => {
   loadMore.disabled = true;
 });
 
-
 const menuToggle = document.querySelector('#menu-toggle');
 const menuLinks = document.querySelectorAll('#main-menu a');
 

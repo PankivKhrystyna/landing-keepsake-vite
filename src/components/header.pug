@@ -1,31 +1,30 @@
-
 input#menu-toggle.menu-toggle(
-  type='checkbox'
-  aria-label='Open or close menu'
+  type='checkbox',
+  aria-label='Open or close menu',
   aria-controls='main-menu'
 )
 
 header.site-header
   .container.header-inner
-    a.logo(href='#home' aria-label='Keepsake, home')
+    a.logo(href='#home', aria-label='Keepsake, home')
       span.logo__mark K
       span.logo__text eepsake
 
-    label.burger(for='menu-toggle' aria-hidden='true')
+    label.burger(for='menu-toggle', aria-hidden='true')
       span
       span
       span
 
-    .nav-wrap#main-menu
+    #main-menu.nav-wrap
       nav(aria-label='Main navigation')
         ul.nav-list
           each item in navItems
             li.nav-list__item
               a.nav-list__link(
-                href=item.href
-                class={'nav-list__link--active': item.active}
+                href=item.href,
+                class={ 'nav-list__link--active': item.active },
                 aria-current=item.active ? 'page' : null
               )= item.label
 
-      a.fav(href='#contact' aria-label='Favourites')
+      a.fav(href='#contact', aria-label='Favourites')
         +icon('heart')

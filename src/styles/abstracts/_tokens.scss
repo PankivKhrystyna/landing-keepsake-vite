@@ -1,14 +1,33 @@
 $colors: (
-  accent: #f95858, accent-hover: #e44646, teal: #2cd5c4,
-  text-dark: #3a3a3c, text: #666a6e, muted: #9aa0a6,
-  bg-light: #f0f3f4, border: #e1e5e8, footer: #2a2a2d,
-  overlay: rgb(30 32 36 / 82%), white: #fff,
-  card-1: #8fd5c8, card-2: #ececec, card-3: #4d4c55,
-  card-4: #a89479, card-5: #1f2125, card-6: #e6a594,
-  card-7: #d9d5cf, card-8: #f2b8be, card-9: #3d4a5c,
-  thumb-1: #5a4838, thumb-2: #3f4452, thumb-3: #7bc4dc, thumb-4: #2e2e2e
+  accent: #f95858,
+  accent-hover: #e44646,
+  teal: #2cd5c4,
+  text-dark: #3a3a3c,
+  text: #666a6e,
+  muted: #9aa0a6,
+  bg-light: #f0f3f4,
+  border: #e1e5e8,
+  footer: #2a2a2d,
+  overlay: rgb(30 32 36 / 0.82),
+  white: #fff,
+  card-1: #8fd5c8,
+  card-2: #ececec,
+  card-3: #4d4c55,
+  card-4: #a89479,
+  card-5: #1f2125,
+  card-6: #e6a594,
+  card-7: #d9d5cf,
+  card-8: #f2b8be,
+  card-9: #3d4a5c,
+  thumb-1: #5a4838,
+  thumb-2: #3f4452,
+  thumb-3: #7bc4dc,
+  thumb-4: #2e2e2e,
 );
-$breakpoints: (md: 768px, lg: 1280px);
+$breakpoints: (
+  md: 768px,
+  lg: 1280px,
+);
 $font-heading: 'Oswald', sans-serif;
 $font-body: 'Open Sans', sans-serif;
 $font-logo: 'Dancing Script', cursive;

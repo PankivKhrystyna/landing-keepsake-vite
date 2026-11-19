@@ -1,6 +1,29 @@
 @use 'sass:map';
 @use 'tokens' as t;
-@mixin mq($bp) { @media (min-width: map.get(t.$breakpoints, $bp)) { @content; } }
-@mixin visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-@mixin flex-center($direction: row) { display: flex; flex-direction: $direction; align-items: center; justify-content: center; }
-@mixin focus-ring($color: var(--color-teal)) { outline: 2px solid $color; outline-offset: 3px; }
+
+@mixin mq($bp) {
+  @media (min-width: map.get(t.$breakpoints, $bp)) {
+    @content;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin focus-ring($color: var(--color-teal)) {
+  outline: 2px solid $color;
+  outline-offset: 3px;
+}

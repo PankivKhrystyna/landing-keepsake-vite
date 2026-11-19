@@ -1,47 +1,50 @@
 mixin btn(label, href, modifier = 'primary')
-  a.btn(class=`btn--${modifier}` href=href)&attributes(attributes)
+  a.btn(class=`btn--${modifier}`, href=href)&attributes(attributes)
     block
     if !block
-      | #{label}
+      | #{ label }
 
 mixin icon(name)
   span.icon__symbol(aria-hidden='true')
     case name
       when 'heart'
-        svg(viewBox='0 0 24 24' role='img' focusable='false')
-          path(d='M12 21s-8-5.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.5-8 11-8 11Z' fill='currentColor')
+        svg(viewBox='0 0 24 24', role='img', focusable='false')
+          path(
+            d='M12 21s-8-5.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.5-8 11-8 11Z',
+            fill='currentColor'
+          )
       when 'web'
-        svg(viewBox='0 0 32 32' role='img' focusable='false')
-          rect(x='3' y='6' width='26' height='20' rx='2' fill='#657c8e')
-          rect(x='7' y='10' width='18' height='12' fill='#d9e4e8')
-          rect(x='9' y='12' width='7' height='7' fill='#8fd5c8')
+        svg(viewBox='0 0 32 32', role='img', focusable='false')
+          rect(x='3', y='6', width='26', height='20', rx='2', fill='#657c8e')
+          rect(x='7', y='10', width='18', height='12', fill='#d9e4e8')
+          rect(x='9', y='12', width='7', height='7', fill='#8fd5c8')
       when 'motion'
-        svg(viewBox='0 0 32 32' role='img' focusable='false')
-          rect(x='4' y='5' width='24' height='22' rx='5' fill='#657c8e')
-          rect(x='9' y='10' width='14' height='12' rx='2' fill='#d9e4e8')
+        svg(viewBox='0 0 32 32', role='img', focusable='false')
+          rect(x='4', y='5', width='24', height='22', rx='5', fill='#657c8e')
+          rect(x='9', y='10', width='14', height='12', rx='2', fill='#d9e4e8')
       when 'print'
-        svg(viewBox='0 0 32 32' role='img' focusable='false')
-          path(d='M7 12h18v14H7z' fill='#657c8e')
-          path(d='M10 5h12v8H10z' fill='#f4c84a')
+        svg(viewBox='0 0 32 32', role='img', focusable='false')
+          path(d='M7 12h18v14H7z', fill='#657c8e')
+          path(d='M10 5h12v8H10z', fill='#f4c84a')
       default
         span +
 
 mixin picture(name, alt, eager = false, folder = 'work')
-  - const loadingMode = eager ? 'eager' : 'lazy'
-  - const priorityMode = eager ? 'high' : 'auto'
+  - const loadingMode = eager ? 'eager' : 'lazy';
+  - const priorityMode = eager ? 'high' : 'auto';
 
   img(
-    src=`/src/assets/images/${folder}/${name}.webp`
-    alt=alt
-    width='800'
-    height='632'
-    decoding='async'
-    loading=loadingMode
+    src=`/src/assets/images/${folder}/${name}.webp`,
+    alt=alt,
+    width='800',
+    height='632',
+    decoding='async',
+    loading=loadingMode,
     fetchpriority=priorityMode
   )
 
 mixin work-card(work, index)
-  article.work-card(class=work.style data-category=work.category tabindex='0')
+  article.work-card(class=work.style, data-category=work.category, tabindex='0')
     +picture(work.image, work.alt, false)
     .work-card__info
       span.work-card__plus +

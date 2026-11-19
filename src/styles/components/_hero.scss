@@ -1,6 +1,36 @@
 @use '../abstracts' as *;
-.hero { padding: 48px 0; background: var(--color-bg-light); }
-.hero h1 { color: var(--color-text-dark); font: 300 var(--hero-h1)/1.25 var(--font-heading); letter-spacing: 3px; text-transform: uppercase; }
-.hero p { margin: 12px 0 24px; }
-.hero__actions { display: flex; flex-direction: column; gap: 10px; }
-@include mq(md) { .hero { padding: 72px 0; } .hero__actions { flex-direction: row; } }
+
+.hero {
+  padding: 48px 0;
+  background: var(--color-bg-light);
+}
+
+.hero h1 {
+  color: var(--color-text-dark);
+  font-weight: 300;
+  font-size: var(--hero-h1);
+  line-height: 1.25;
+  font-family: var(--font-heading);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero p {
+  margin: 12px 0 24px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@include mq(md) {
+  .hero {
+    padding: 72px 0;
+  }
+
+  .hero__actions {
+    flex-direction: row;
+  }
+}
