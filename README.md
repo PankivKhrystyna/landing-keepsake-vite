@@ -35,7 +35,7 @@ npm -v
 ### 1. Клонування репозиторію
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/landing-keepsake-vite.git
+git clone https://github.com/PankivKhrystyna/landing-keepsake-vite.git
 cd landing-keepsake-vite
 ```
 
